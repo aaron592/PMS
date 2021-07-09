@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop 360</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/fontawesome.min.css" integrity="sha512-OdEXQYCOldjqUEsuMKsZRj93Ht23QRlhIb8E/X0sbwZhme8eUw6g8q7AdxGJKakcBbv7+/PX0Gc2btf7Ru8cZA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <div class="modal" id="view_product">
+        <div class="product_modal">
+            <div class="product_img">
+                <img src="https://www.giztop.com/media/catalog/product/cache/dc206057cdd42d7e34b9d36e347785ca/r/e/realme_x7_pro-5.jpg" id="single_img"/>
+                <div class="side_img" id="side_image_display">
+                    
+                </div>
+            </div>
+            <div class="product_details">
+                <div class="close" onclick="closeProduct()">
+                    &#x2715;
+                </div>
+                <div class="product_detail">
+                    <h2 id="single_name">Realme X7</h2>
+                    <h2 ><span style="font-size: 20px;font-weight: 500;color:rgb(204, 44, 44);">&#x20B9;</span> <span id="single_price" style="font-size: 40px;color:rgb(204, 44, 44);font-weight: 350;"> 500</span></h2>
+                    <div class="rate">
+                        <div class="gray_star_rate" >
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <div class="gold_star_rate" id="gold-star-rate">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="noof_rating">
+                        <p id="noofrating">( 245 )</p>
+                    </div>
+                    
+                    <p id="single_category"></p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto ab voluptatum quasi nostrum laudantium sint harum? Autem laboriosam temporibus recusandae est.</p>
+                    <button><i class="fa fa-baby-carriage"></i> add to cart</button>
+                    <br/>
+                    <br/>
+                    <h2 style="color:black; font-size:20px;">Rate The Product</h2>
+                    <div class="rate_modal">
+                        <i class="fa fa-star user-rate" onmouseover="userRate(1)" onclick="rateProduct(1)"></i>
+                        <i class="fa fa-star user-rate" onmouseover="userRate(2)" onclick="rateProduct(2)"></i>
+                        <i class="fa fa-star user-rate" onmouseover="userRate(3)" onclick="rateProduct(3)"></i>
+                        <i class="fa fa-star user-rate" onmouseover="userRate(4)" onclick="rateProduct(4)"></i>
+                        <i class="fa fa-star user-rate" onmouseover="userRate(5)" onclick="rateProduct(5)"></i>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="nav">
+        <div class="logo">
+            <img src="https://cdn3.iconfinder.com/data/icons/glypho-social-and-other-logos/64/logo-amazon-512.png" width="75%" height="60px"/>
+        </div>
+    </div>
+
+    <div class="products" id="product_display" >
+        
+        
+    </div>
+    
+
+    <script src="js/index.js"></script>
+</body>
+
+</html>

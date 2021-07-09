@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="./css/admin.css">
+</head>
+<body>
+<div class="modal closemodel" id="add_model" onclick="toggleAddModel(event)">
+    <div class="modal_container">
+        <div class="modal_header">
+            <div class="product_button">
+                <h1>Add Product</h1>
+                <button class="btn closemodel" onclick="toggleAddModel(event)">&#10006;</button>
+            </div>
+             <form id="clear_form">
+           <div class="form">
+               <div class="inp">
+                   <input type="text" placeholder="Name" id="add_name"/>
+               </div>
+               <div class="inp" style="display: flex;align-items: center;">
+                <p style="width:70%;color:gray;font-family: 'Segoe UI';font-size:13px">Select color:</p>
+                <input type="Color" id="add_color"/>
+            </div>
+            <div class="inp">
+                
+                <input type="text" placeholder="Price" id="add_price"/>
+            </div>
+            <div class="inp">
+                <input type="text" placeholder="Category" id="add_category"/>
+            </div>
+            <div class="inp">
+                <input type="text" placeholder="Image URL" id="add_imageurl"/>
+            </div>
+            <div class="inp">
+                <input type="text" placeholder="Side Image URLs Separated by ( , )" id="side_imageurl"/>
+            </div>
+            
+           </div>
+        </form>
+        </div>
+        <div class="button">
+            <button onclick="addProduct()">Add</button>
+        </div>
+    </div>
+</div>
+
+<div class="modal closemodel" id="update_model" onclick="toggleUpdateModel(event)">
+    <div class="modal_container">
+        <div class="modal_header">
+            <div class="product_button">
+                <h1>Update Product</h1>
+                <button class="btn closemodel" onclick="toggleUpdateModel(event)">&#10006;</button>
+            </div>
+             <form id="clear_form">
+           <div class="form">
+               <div class="inp">
+                   <input type="text" placeholder="Name" id="update_name"/>
+               </div>
+               <div class="inp" style="display: flex;align-items: center;">
+                <p style="width:70%;color:gray;font-family: 'Segoe UI';font-size:13px">Select color:</p>
+                <input type="Color" id="update_color"/>
+            </div>
+            <div class="inp">
+                
+                <input type="text" placeholder="Price" id="update_price"/>
+            </div>
+            <div class="inp">
+                <input type="text" placeholder="Category" id="update_category"/>
+            </div>
+            <div class="inp">
+                <input type="text" placeholder="Image URL" id="update_imageurl"/>
+            </div>
+            <div class="inp">
+                <input type="text" placeholder="Side Image URLs Separated by ( , )" id="update_side_imageurl"/>
+            </div>
+           </div>
+        </form>
+        </div>
+        <div class="button">
+            <button onclick="updateProduct()">Update</button>
+        </div>
+    </div>
+</div>
+
+
+  <div class="container">
+      <h1>Admin Panel</h1>
+      <div id="alert"  class="alert exit">
+        <p id="alert_para">Updated successfully!!!</p>
+        <p class="exit" onclick="toggleAlertModel(event)" style="cursor:pointer;padding-right:10px;">&#x2716;</p>
+     </div>
+  </div>
+
+
+  <div class="product_table">
+    <button class="add-modal" onclick="toggleAddModel(event)"><span style="font-size:18px;font-weight: bold;">+</span> Add Product</button>
+      <table>
+          <thead>
+              <tr>
+                  <th>SL.no:</th>
+                  <th>Name</th>
+                  <th>Color</th>
+                  <th>Price</th>
+                  <th>Category</th>
+                  <th>Rating</th>
+                  <th>Action</th>
+              </tr>
+          </thead>
+          <tbody id="data">
+
+          </tbody>
+      </table>
+  </div>
+   
+
+
+    <script src="./js/admin.js"></script>
+</body>
+</html>
